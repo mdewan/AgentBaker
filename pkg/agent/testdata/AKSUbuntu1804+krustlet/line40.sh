@@ -64,9 +64,9 @@ installContainerRuntime() {
 
 installNetworkPlugin() {
     if [[ "${NETWORK_PLUGIN}" = "azure" ]]; then
-        installAzureCNI
+        echo "skipped azure CNI installation, for network plugin = azure"
     fi
-    installCNI
+    echo "skipped azure CNI installation, for network plugin = none"
     rm -rf $CNI_DOWNLOADS_DIR &
 }
 
